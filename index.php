@@ -386,7 +386,7 @@
         <div></div>
         <div aria-hidden="true"></div> <!-- slot central -->
         <nav class="nav">
-            <a href="#">Nouveautés</a>
+            <a href="reservation.php">Nouveautés</a>
             <a href="#">Femme</a>
             <a href="#">Homme</a>
             <a href="#">Cadeaux</a>
