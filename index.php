@@ -2578,7 +2578,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
-            color: #2c2c2c;
+            background: linear-gradient(135deg, #d4af37 0%, #f1c14d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            letter-spacing: 0.5px;
             margin: 0 auto 5px; /* Marge inférieure réduite */
             font-weight: 500;
             letter-spacing: 0.5px;
@@ -2953,8 +2958,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <section class="reservation-section" id="reservation">
         <div class="reservation-container">
-            <div class="section-header">
-                <h2 class="section-title">RÉSERVATION</h2>
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h2 class="section-title" style="display: inline-block; position: relative;">RÉSERVATION</h2>
+                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #d4af37, #f1c14d); margin: 15px auto 0; border-radius: 2px;"></div>
             </div>
             
             <div class="reservation-content">

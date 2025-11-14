@@ -7,26 +7,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* Style de base */
-        body {
-            font-family: 'Nunito', sans-serif;
-            line-height: 1.7;
-            color: #333;
-            font-weight: 300;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 400;
-            margin: 1.5rem 0 1.2rem;
-            line-height: 1.3;
-            color: #2c2c2c;
-        }
         @keyframes zoomIn {
             from {
                 opacity: 0;
@@ -1334,7 +1318,8 @@
                 <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
             <div class="main-nav">
-                <a href="#">Réserver</a>
+                <a href="carte.php">Carte</a>
+                <a href="reservation.php">Réserver</a>
             </div>
         </nav>
     </div>
@@ -1345,7 +1330,7 @@
 
 <!-- HERO PRINCIPAL (Keyfet / morph) -->
 <section class="hero">
-    <img class="hero-img" src="../assets/img/image.resto.jpg" alt="Visuel de collection" />
+    <img class="hero-img" src="assets/img/image.resto.jpg" alt="Visuel de collection" />
     <div class="hero-overlay">
         <h1 class="brand--hero" id="heroBrand" aria-hidden="true">Keyfet</h1>
         <p class="tagline" aria-hidden="true">New season • Timeless craftsmanship</p>
@@ -1428,7 +1413,7 @@
 
         <!-- Bouton de réservation -->
         <div class="reservation-button-container" style="margin-top: 40px; text-align: center; position: relative; z-index: 2;">
-            <a href="#reservation" class="reservation-button" style="display: inline-flex; align-items: center; justify-content: center; padding: 15px 35px; background: linear-gradient(45deg, #d4af37, #f1c40f); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; z-index: 1;">
+            <a href="reservation.php" class="reservation-button" style="display: inline-flex; align-items: center; justify-content: center; padding: 15px 35px; background: linear-gradient(45deg, #d4af37, #f1c40f); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; z-index: 1;">
                 <span>RÉSERVER</span>
                 <i class="fas fa-arrow-right" style="margin-left: 10px; transition: transform 0.3s ease; color: #ffffff;"></i>
             </a>
@@ -2053,7 +2038,7 @@
             <div class="video-card">
                 <div class="video-wrapper">
                     <video class="video-preview" loop muted playsinline>
-                        <source src="../assets/img/From KlickPin CF Pin by The Pretty Girl Bible _ Femini on Facebook Reels _ Snap food Food vids Fire food.mp4" type="video/mp4">
+                        <source src="assets/img/From KlickPin CF Pin by The Pretty Girl Bible _ Femini on Facebook Reels _ Snap food Food vids Fire food.mp4" type="video/mp4">
                     </video>
                     <div class="play-button">
                         <i class="fas fa-play"></i>
@@ -2066,7 +2051,7 @@
             <div class="video-card">
                 <div class="video-wrapper">
                     <video class="video-preview" loop muted playsinline>
-                        <source src="../assets/img/From KlickPin CF Canadian Heritage Rib-Eye [Vídeo] _ Receitas Açougue.mp4" type="video/mp4">
+                        <source src="assets/img/From KlickPin CF Canadian Heritage Rib-Eye [Vídeo] _ Receitas Açougue.mp4" type="video/mp4">
                     </video>
                     <div class="play-button">
                         <i class="fas fa-play"></i>
@@ -2593,7 +2578,12 @@
     .section-title {
         font-family: 'Playfair Display', serif;
         font-size: 42px;
-        color: #2c2c2c;
+        background: linear-gradient(135deg, #d4af37 0%, #f1c14d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        letter-spacing: 0.5px;
         margin: 0 auto 5px; /* Marge inférieure réduite */
         font-weight: 500;
         letter-spacing: 0.5px;
@@ -2968,8 +2958,9 @@
 
 <section class="reservation-section" id="reservation">
     <div class="reservation-container">
-        <div class="section-header">
-            <h2 class="section-title">Réservation</h2>
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title" style="display: inline-block; position: relative;">RÉSERVATION</h2>
+            <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #d4af37, #f1c14d); margin: 15px auto 0; border-radius: 2px;"></div>
         </div>
 
         <div class="reservation-content">
