@@ -24,6 +24,20 @@ if ($cats) {
   <style>
     :root{ --gold:#d4af37; }
     body{margin:0;background:#f8f5f7;color:#1a1a1a;font-family: ui-serif, "Playfair Display", Georgia, serif}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.05);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto}
+    .brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:#1a1a1a;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
+    .main-nav{display:flex;gap:20px;align-items:center}
+    .main-nav a{font-size:15px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:#1a1a1a;position:relative;padding-bottom:6px}
+    .main-nav a::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(135deg,var(--gold) 0%,#f1c14d 100%);opacity:0;transform:scaleX(0);transform-origin:center;transition:transform .25s ease,opacity .25s ease}
+    .main-nav a:hover::after,.main-nav a.active::after{opacity:1;transform:scaleX(1)}
+    .social-nav{display:flex;gap:12px;color:#8a7a54}
+    .social-nav a{color:#8a7a54;font-size:14px;transition:color .2s ease}
+    .social-nav a:hover{color:var(--gold)}
+    @media (max-width:720px){
+      .header-inner{flex-direction:column;gap:12px}
+      .main-nav{flex-wrap:wrap;justify-content:center}
+    }
     .wrap{max-width:1200px;margin:30px auto;padding:0 20px}
     a.back{display:inline-block;margin:12px 0 24px;text-decoration:none;color:#8a7a54}
     h1{font-family:'Playfair Display',serif;font-weight:500;margin:0 0 10px}
@@ -46,6 +60,22 @@ if ($cats) {
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.php">Keyfet</a>
+      <nav class="main-nav">
+        <a href="index.php">Accueil</a>
+        <a href="carte.php" class="active">Carte</a>
+        <a href="reservation.php">Réserver</a>
+      </nav>
+      <div class="social-nav">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </header>
   <div class="wrap">
     <a class="back" href="index.php"><i class="fas fa-arrow-left"></i> Retour</a>
     <h1>Notre Carte</h1>

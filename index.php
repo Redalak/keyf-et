@@ -1297,11 +1297,11 @@
     <button class="menu-toggle" id="closeMenu" aria-label="Fermer le menu"><i class="fas fa-times"></i></button>
     <nav class="sidebar-nav">
         <a href="#">Accueil</a>
-        <a href="#">Notre Carte</a>
+        <a href="carte.php">Notre Carte</a>
         <a href="#">Notre Équipe</a>
         <a href="#">Galerie</a>
         <a href="#">Contact</a>
-        <a href="#">Réserver</a>
+        <a href="reservation.php">Réserver</a>
     </nav>
 </div>
 <div class="overlay" id="overlay"></div>
@@ -2019,7 +2019,7 @@
             </div>
             
             <div class="carte-cta">
-                <a href="#reservation" class="btn-reserver">VOIR LA CARTE</a>
+                <a href="carte.php" class="btn-reserver">VOIR LA CARTE</a>
             </div>
         </div>
     </div>
