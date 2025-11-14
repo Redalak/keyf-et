@@ -1318,7 +1318,8 @@
                 <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
             <div class="main-nav">
-                <a href="#">Réserver</a>
+                <a href="carte.php">Carte</a>
+                <a href="reservation.php">Réserver</a>
             </div>
         </nav>
     </div>
@@ -1329,7 +1330,7 @@
 
 <!-- HERO PRINCIPAL (Keyfet / morph) -->
 <section class="hero">
-    <img class="hero-img" src="../assets/img/image.resto.jpg" alt="Visuel de collection" />
+    <img class="hero-img" src="assets/img/image.resto.jpg" alt="Visuel de collection" />
     <div class="hero-overlay">
         <h1 class="brand--hero" id="heroBrand" aria-hidden="true">Keyfet</h1>
         <p class="tagline" aria-hidden="true">New season • Timeless craftsmanship</p>
@@ -1412,7 +1413,7 @@
         
         <!-- Bouton de réservation -->
         <div class="reservation-button-container" style="margin-top: 40px; text-align: center; position: relative; z-index: 2;">
-            <a href="#reservation" class="reservation-button" style="display: inline-flex; align-items: center; justify-content: center; padding: 15px 35px; background: linear-gradient(45deg, #d4af37, #f1c40f); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; z-index: 1;">
+            <a href="reservation.php" class="reservation-button" style="display: inline-flex; align-items: center; justify-content: center; padding: 15px 35px; background: linear-gradient(45deg, #d4af37, #f1c40f); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; z-index: 1;">
                 <span>RÉSERVER</span>
                 <i class="fas fa-arrow-right" style="margin-left: 10px; transition: transform 0.3s ease; color: #ffffff;"></i>
             </a>
@@ -2037,7 +2038,7 @@
             <div class="video-card">
                 <div class="video-wrapper">
                     <video class="video-preview" loop muted playsinline>
-                        <source src="../assets/img/From KlickPin CF Pin by The Pretty Girl Bible _ Femini on Facebook Reels _ Snap food Food vids Fire food.mp4" type="video/mp4">
+                        <source src="assets/img/From KlickPin CF Pin by The Pretty Girl Bible _ Femini on Facebook Reels _ Snap food Food vids Fire food.mp4" type="video/mp4">
                     </video>
                     <div class="play-button">
                         <i class="fas fa-play"></i>
@@ -2050,7 +2051,7 @@
             <div class="video-card">
                 <div class="video-wrapper">
                     <video class="video-preview" loop muted playsinline>
-                        <source src="../assets/img/From KlickPin CF Canadian Heritage Rib-Eye [Vídeo] _ Receitas Açougue.mp4" type="video/mp4">
+                        <source src="assets/img/From KlickPin CF Canadian Heritage Rib-Eye [Vídeo] _ Receitas Açougue.mp4" type="video/mp4">
                     </video>
                     <div class="play-button">
                         <i class="fas fa-play"></i>
