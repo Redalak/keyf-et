@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 14, 2025 at 10:04 AM
+-- Generation Time: Nov 14, 2025 at 02:20 PM
 -- Server version: 8.0.40
 -- PHP Version: 8.3.14
 
@@ -68,6 +68,16 @@ CREATE TABLE `menu_categories` (
   `active` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `menu_categories`
+--
+
+INSERT INTO `menu_categories` (`id`, `name`, `description`, `position`, `active`) VALUES
+(1, 'Entrées', 'Pour commencer', 1, 1),
+(2, 'Plats', 'Les incontournables', 2, 1),
+(3, 'Desserts', 'Douceurs', 3, 1),
+(4, 'Boissons', 'Pour se désaltérer', 4, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +94,37 @@ CREATE TABLE `menu_items` (
   `position` smallint UNSIGNED NOT NULL DEFAULT '0',
   `active` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `menu_items`
+--
+
+INSERT INTO `menu_items` (`id`, `category_id`, `name`, `description`, `image_url`, `price`, `position`, `active`) VALUES
+(1, 2, 'Assiette de Mezze', NULL, 'assets/img/carte/assiette-de-mezze.webp', 0.00, 1, 1),
+(2, 2, 'Beyti', NULL, 'assets/img/carte/beyti.webp', 0.00, 2, 1),
+(3, 2, 'Kebab adana', NULL, 'assets/img/carte/kebab-adana.webp', 0.00, 3, 1),
+(4, 2, 'Grillades Mixte 3 personnes', NULL, 'assets/img/carte/grillades-mixte-3p.webp', 0.00, 4, 1),
+(5, 2, 'Assiettes grillades 4 personnes', NULL, 'assets/img/carte/assiettes-grillades-4p.webp', 0.00, 5, 1),
+(6, 2, 'Planche familial', NULL, 'assets/img/carte/planche-familial.webp', 0.00, 6, 1),
+(7, 2, 'Brochette d’agneau', NULL, 'assets/img/carte/brochette-agneau-2.webp', 0.00, 7, 1),
+(8, 2, 'Pizza turc', NULL, 'assets/img/carte/pizza-turc.webp', 0.00, 8, 1),
+(9, 2, 'Soupes aux tripes', NULL, 'assets/img/carte/soupes-tripes.webp', 0.00, 9, 1),
+(10, 2, 'Soupe de lentille au corail', NULL, 'assets/img/carte/soupe-lentille-corail.webp', 0.00, 10, 1),
+(11, 2, 'Plat du jour', NULL, 'assets/img/carte/plat-du-jour.webp', 0.00, 11, 1),
+(12, 2, 'Kefta', NULL, 'assets/img/carte/kefta.webp', 0.00, 12, 1),
+(13, 2, 'Grillade Mixte', NULL, 'assets/img/carte/grillade-mixte.webp', 0.00, 13, 1),
+(14, 2, 'Ali Nazik', NULL, 'assets/img/carte/ali-nazik.webp', 0.00, 14, 1),
+(15, 2, 'Kebab d’aubergine', NULL, 'assets/img/carte/kebab-aubergine.webp', 0.00, 15, 1),
+(16, 4, 'Café turc', NULL, 'assets/img/carte/cafe-turc.webp', 0.00, 1, 1),
+(17, 4, 'Expresso', NULL, 'assets/img/carte/expresso.webp', 0.00, 2, 1),
+(18, 4, 'Thé noir', NULL, 'assets/img/carte/the-noir.webp', 0.00, 3, 1),
+(19, 3, 'Kunefe', NULL, 'assets/img/carte/kunefe.webp', 0.00, 1, 1),
+(20, 3, 'Riz au lait', NULL, 'assets/img/carte/riz-au-lait.webp', 0.00, 2, 1),
+(21, 3, 'Baklava pistache', NULL, 'assets/img/carte/baklava-pistache.webp', 0.00, 3, 1),
+(22, 1, 'Assiette Mezze', NULL, 'assets/img/carte/assiette-mezze.webp', 0.00, 1, 1),
+(23, 1, 'Salade Coban', NULL, 'assets/img/carte/salade-coban.webp', 0.00, 2, 1),
+(24, 1, 'Pidet Aux Fromages', NULL, 'assets/img/carte/pidet-aux-fromages.webp', 0.00, 3, 1),
+(25, 1, 'Pidet Agneaux', NULL, 'assets/img/carte/pidet-agneaux.webp', 0.00, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -184,13 +225,13 @@ ALTER TABLE `capacity_overrides`
 -- AUTO_INCREMENT for table `menu_categories`
 --
 ALTER TABLE `menu_categories`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `reservations`
